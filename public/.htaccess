@@ -8,6 +8,7 @@
     # Handle Authorization Header
     # andre -- RewriteCond %{HTTP:Authorization} .
 
+    # BEGIN
     #Normal way (in case you need to deploy to NON-heroku)
     RewriteCond %{HTTPS} !=on
 
@@ -15,6 +16,11 @@
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
 
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    #If neither above conditions are met, redirect to https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # END
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
