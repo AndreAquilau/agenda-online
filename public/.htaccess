@@ -9,6 +9,8 @@
     # andre -- RewriteCond %{HTTP:Authorization} .
 
     # BEGIN
+    # ADD RULES HEROKU
+
     #Normal way (in case you need to deploy to NON-heroku)
     RewriteCond %{HTTPS} !=on
 
