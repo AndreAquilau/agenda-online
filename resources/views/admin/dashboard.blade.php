@@ -305,8 +305,9 @@
             <p style="margin-top: 10px;">Alunos: André, Guilherme, Isabelly, Janismar e Miguel.</p>
             <p style="margin-top: 10px;">Projeto desenvolvido em PHP, CSS Puro, Laravel(Back-End).</p>
         </div>
-        <div class="opaco" id="pop"></div>
-        <script src="{{asset('js/dashboard.js')}}"></script>
+    </div>
+    <div class="opaco" id="pop"></div>
+    <script src="{{asset('js/dashboard.js')}}"></script>
 </body>
 
 </html>
