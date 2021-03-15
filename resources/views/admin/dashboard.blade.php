@@ -24,24 +24,29 @@
     </section>
     <!--Conteudos-->
     <section class="head-screen">
-     <i class="fas fa-home"></i>
-       <i class="fas fa-search"></i>
-     <i class="far fa-calendar-plus"></i>
-        <i class="fas fa-sign-out-alt"></i>
+        <div class="btn-head"><i class="fas fa-home"></i></div>
+        <div class="btn-head"><i class="fas fa-history"></i></div>
+        <div class="btn-head"> <i class="fas fa-search"></i></div>
+        <div class="btn-head"> <i class="far fa-calendar-plus"></i></div>
+        <div class="btn-head"> <i class="fas fa-sign-out-alt"></i></div>
     </section>
+    <div class="pesquisar">
+        <input class="search" type="search" placeholder="O que você procura?"><button
+            class="btn-search">Pesquisar</button>
+    </div>
     <section class="head">
         <div class="config">
             <div class="msg">Bem-Vindo</div>
             <div class="usuario">Guilherme Araujo</div>
-            <button class="btn-logout"><i class="fas fa-sign-out-alt">Sair</i></button>
+            <button class="btn-logout"><i class="fas fa-sign-out-alt"></i>Sair</button>
         </div>
     </section>
     <section class="container">
         <nav class="navbar">
-            <a href="/dashboard">
+            <a href="dashboard.html">
                 <div class="agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agenda</div>
             </a>
-            <a href="/historico">
+            <a href="historico.html">
                 <div class="historico"><i class="fas fa-history" style="margin-right: 5px;"></i>Historico</div>
             </a>
         </nav>
@@ -301,17 +306,7 @@
             <p style="margin-top: 10px;">Projeto desenvolvido em PHP, CSS Puro, Laravel(Back-End).</p>
         </div>
         <div class="opaco" id="pop"></div>
+        <script src="{{asset('js/dashboard.js')}}"></script>
 </body>
-<script>
-    /*Script POP*/
-    function abrir() {
-        document.getElementById('popup').style.display = 'block';
-        document.getElementById('pop').style.display = 'block';
-    }
-    function fechar() {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('pop').style.display = 'none';
-    }
-</script>
 
 </html>

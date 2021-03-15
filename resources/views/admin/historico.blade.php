@@ -18,10 +18,21 @@
 </head>
 
 <body>
-    <!--Valores do Backgrounds-->
-    <section class="bg">
+ <!--Valores do Backgrounds-->
+ <section class="bg">
         <div class="imagem-bg"></div>
     </section>
+    <section class="head-screen">
+        <div class="btn-head"><i class="fas fa-home"></i></div>
+        <div class="btn-head"><i class="fas fa-history"></i></div>
+        <div class="btn-head"> <i class="fas fa-search"></i></div>
+        <div class="btn-head"> <i class="far fa-calendar-plus"></i></div>
+        <div class="btn-head"> <i class="fas fa-sign-out-alt"></i></div>
+    </section>
+    <div class="pesquisar">
+        <input class="search" type="search" placeholder="O que você procura?"><button
+            class="btn-search">Pesquisar</button>
+    </div>
     <!--Conteudos-->
     <section class="head">
         <div class="config">
@@ -32,10 +43,10 @@
     </section>
     <section class="container">
         <nav class="navbar">
-            <a href="/dashboard">
+            <a href="dashboard.html">
                 <div class="agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agenda</div>
             </a>
-            <a href="/historico">
+            <a href="historico.html">
                 <div class="historico"><i class="fas fa-history" style="margin-right: 5px;"></i>Historico</div>
             </a>
         </nav>
@@ -60,6 +71,96 @@
                             <!--Dados da tabela-->
                             <tbody>
                                 <!--Dados da tabela-->
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Aniversario</td>
+                                    <td>11/03/2021</td>
+                                    <td>15:00</td>
+                                    <td>Comprar presente</td>
+                                    <td>Festa</td>
+                                    <td>Concluido</td>
+                                </tr>
                                 <tr>
                                     <td>1</td>
                                     <td>Aniversario</td>

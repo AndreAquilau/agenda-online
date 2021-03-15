@@ -17,6 +17,8 @@ mix.js('resources/js/app.js', 'public/js')
  ]);
  */
 
+mix.js('resources/js/dashboard.js', 'public/js/dashboard.js');
+
  mix.styles([
     'resources/css/stylelogin.css',
  ], 'public/css/stylelogin.css');
