@@ -17,9 +17,6 @@
 
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    #If neither above conditions are met, redirect to https
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
     # END
 
     # Redirect Trailing Slashes If Not A Folder...
