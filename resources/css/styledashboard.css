@@ -1,0 +1,637 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/*Estilo da pagina*/
+.bg {
+  display: flex;
+  background-color: #03917538;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.imagem-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('../img/bg-1.svg');
+  position: relative;
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.9;
+}
+/*Cabeçalho do usuario*/
+.head {
+  background-color: transparent;
+  color: #035e4b;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+/*Configurações*/
+.config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 40px;
+  margin-top: 10px;
+}
+.msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*Nome do usuario*/
+.usuario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+  font-weight: 600;
+}
+/*Botão de saida*/
+.btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin: 15px;
+  background-color: #035e4b;
+  width: 90px;
+  height: 35px;
+  border-radius: 4px;
+}
+/*Div do conteudo*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+  background-color: transparent;
+  margin-top: 40px;
+}
+/*Barra de navegação*/
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: transparent;
+  color: black;
+  font-size: 15px;
+  width: 205px;
+  height: 30px;
+  margin-left: 8%;
+}
+/*Opção de navegação(Agenda)*/
+.agenda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 100px;
+}
+/*Opção de navegação(Historico)*/
+.historico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  height: 30px;
+  width: 100px;
+  background-color: rgb(185, 185, 185);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/*Dados*/
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+/*Div que realiza o agendamento*/
+.agendar {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 20%;
+  height: 550px;
+  padding: 15px;
+  box-shadow: 1px 1px 5px white;
+}
+/*Div que tem o registro dos agendamentos*/
+.registro {
+  background-color: white;
+  width: 60%;
+  height: 550px;
+  border-radius: 4px;
+  padding: 15px;
+  margin-left: 5px;
+  box-shadow: 1px 1px 5px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*Titulo da agenda*/
+.titulo-agenda {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+/*Formulario*/
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+}
+/*estilo dos inputs*/
+.evento-agendar,
+.data-agendar,
+.horas-agendar,
+.categoria-agendar {
+  color: rgb(118, 118, 118);
+  border-radius: 4px;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
+  font-weight: bold;
+  background-color: white;
+  border: 2px solid rgb(206, 206, 206);
+}
+.descricao-agendar {
+  color: rgb(118, 118, 118);
+  border-radius: 4px;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 96%;
+  max-width: 100%;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin: 5px;
+  font-weight: bold;
+
+  background-color: white;
+  border: 2px solid rgb(206, 206, 206);
+}
+/*Organização dos inputs*/
+.evento,
+.data-time,
+.categoria,
+.descricao {
+  display: flex;
+  flex-direction: row;
+}
+/*Botões*/
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.btn-save {
+  color: white;
+  background-color: forestgreen;
+  width: 40%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: 15px;
+}
+.btn-reset {
+  color: white;
+  background-color: dodgerblue;
+  width: 40%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  font-size: 15px;
+}
+/*Tabela*/
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+/*Definindo o tamanho maximo de vizualização da tabela*/
+.tabela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 920px;
+  min-height: 530px;
+  max-height: 530px;
+  padding: 3px;
+  overflow: scroll;
+  overflow: auto;
+  background-color: transparent;
+}
+/*Cabeçalho da tabela*/
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+/*Espaçamento dos dados*/
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+/*borda do fundo*/
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+/*Linha da cor cinza*/
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+/*Borda do ultimo dado*/
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+/*Botões da tabela*/
+.btn-check {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: forestgreen;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.btn-edit {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: goldenrod;
+  border-radius: 4px;
+  font-size: 15px;
+}
+.btn-del {
+  outline: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  color: white;
+  background-color: darkred;
+  border-radius: 4px;
+  font-size: 15px;
+}
+/*Hovers, Active e Focus*/
+.agenda,
+.historico:hover {
+  cursor: pointer;
+}
+.btn-save:hover {
+  border-bottom: 4px solid rgb(5, 70, 5);
+  cursor: pointer;
+}
+.btn-reset:hover {
+  border-bottom: 4px solid rgb(11, 78, 146);
+  cursor: pointer;
+}
+.btn-logout:hover {
+  cursor: pointer;
+  color: #035e4b;
+  background-color: transparent;
+  border: 2px solid #035e4b;
+}
+.content-table tbody tr:hover {
+  font-weight: bold;
+  color: #009879;
+}
+.btn-check:hover {
+  background-color: rgb(14, 95, 14);
+}
+.btn-edit:hover {
+  background-color: rgb(161, 119, 11);
+}
+.btn-del:hover {
+  background-color: rgb(100, 7, 7);
+}
+.credito:hover {
+  color: #039175;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.closed:hover {
+  color: #454545;
+}
+.btn-save:active {
+  border: none;
+}
+.btn-reset:active {
+  border: none;
+}
+.agenda,
+.historico:active {
+  background-color: white;
+  border-top: 3px solid #057760;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/*Restirar o efeito do link*/
+a {
+  color: black;
+  text-decoration-color: black;
+  text-decoration: none;
+}
+/*ScrollBar*/
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #009879;
+}
+/*POPUP*/
+.avisos {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 30px;
+  text-align: center;
+}
+/*Estilo de todos os popups*/
+.popup-save {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-check {
+  background-color: rgba(14, 189, 23, 0.5);
+  color: darkolivegreen;
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-edit {
+  background-color: rgba(221, 199, 0, 0.5);
+  color: rgb(161, 119, 11);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+.popup-del {
+  background-color: rgba(173, 24, 24, 0.5);
+  color: rgb(173, 24, 24);
+  border-radius: 4px;
+  width: 70%;
+  height: 50%;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  animation: scale 0.7s linear;
+}
+/*Efeito de expansão*/
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  30% {
+    transform: scale(0.3);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  70% {
+    transform: scale(0.7);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  90% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*Credito*/
+.credito {
+  color: white;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-weight: 600;
+}
+/*popup de agradecimento*/
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  padding: 15px;
+  background: white;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  text-align: center;
+  box-shadow: 1px 1px 5px white;
+  z-index: +2;
+  display: none;
+  animation: scale 1s linear;
+}
+.popup p {
+  color: #454545;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+.closed {
+  color: #adadad;
+  font-size: 20px;
+  margin-left: 280px;
+  margin-top: 1px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+.opaco {
+  position: center;
+  background-color: #03917590;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.3;
+  display: none;
+}
+.head-screen {
+  display: none;
+}
+/*Responsivo*/
+@media only screen and (max-device-width: 900px) {
+  .head-screen {
+background-color: #035e4b;
+color: white;
+width: 100%;
+height: 30%;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 5px;
+  }
+
+  .head-screen i {
+   margin: 10px;
+   font-size: 30px;
+  }
+  .head{
+display: none;
+  }
+  /*Configurações*/
+  .config {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-top: 1px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  .agendar {
+    width: 350px;
+    margin-top: 395px;
+    display: none;
+  }
+  .agenda {
+    display: none;
+  }
+  .historico {
+    display: none;
+  }
+  .registro {
+    width: 350px;
+    margin-top: 5px;
+  }
+  .tabela {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+  }
+  .content-table {
+    max-width: 350px;
+    min-height: 530px;
+    max-height: 530px;
+
+  }
+}
