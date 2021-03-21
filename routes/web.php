@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AgendaController;
+use App\Http\Controllers\HistoricoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,11 +24,12 @@ Route::get('/', function () {
     return view('site/login');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin/dashboard');
-});
+Route::get('/dashboard', [AgendaController::class, 'index'])->name('dashboard');
+Route::get('/dashboard/editar/{agenda}', [AgendaController::class, 'edit'])->name('dashboard_editar');
+Route::patch('/dashboard/editar/{agenda}', [AgendaController::class, 'updateAgenda'])->name('dashboard_update');
 
-Route::get('/historico', function () {
-    return view('admin/historico');
-});
+Route::get('/historico', [HistoricoController::class, 'index'])->name('historico');
 
+Route::post('/dashboard/novo', [AgendaController::class, 'store'])->name('registrar_agenda');
+Route::delete('/dashboard/{agenda}', [AgendaController::class, 'destroy'])->name('destroy_agenda');
+Route::patch('/dashboard/{agenda}', [AgendaController::class, 'updateConfirm'])->name('update_confirm_agenda');

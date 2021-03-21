@@ -55,24 +55,25 @@
         <section class="main">
             <div class="agendar">
                 <h1 class="titulo-agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agendar</h1>
-                <form action="{{ route('registrar_agenda') }}" method="POST" class="formulario">
+                <form action="{{ route('dashboard_update', $agenda->id) }}" method="POST" class="formulario">
                 @csrf
+                @method('PATCH')
                     <div class="evento">
-                        <input type="text" name="evento" class="evento-agendar" placeholder="Evento...">
+                        <input type="text" name="evento" class="evento-agendar" value="{{$agenda->evento}}" placeholder="Evento...">
                     </div>
                     <div class="data-time">
-                        <input type="date" name="data" class="data-agendar" placeholder="00/05/2021">
-                        <input type="time" name="hora" class="horas-agendar" placeholder="00:00">
+                        <input type="date" name="data" class="data-agendar" value="{{$agenda->data}}"  placeholder="00/05/2021">
+                        <input type="time" name="hora" class="horas-agendar" value="{{$agenda->hora}}" placeholder="00:00">
                     </div>
                     <div class="categoria">
-                        <input type="text" name="categoria"  class="categoria-agendar" placeholder="Categoria...">
+                        <input type="text" name="categoria"  class="categoria-agendar" value="{{$agenda->categoria}}" placeholder="Categoria...">
                     </div>
                     <div class="descricao">
-                        <textarea name="descricao" class="descricao-agendar" placeholder="Descrição..." maxlength="20"></textarea>
+                        <textarea name="descricao" class="descricao-agendar"  maxlength="20">{{$agenda->descricao}}</textarea>
                     </div>
                 <div class="btn">
                     <button type="submit" class="btn-save"><i class="fas fa-check"
-                            style="margin-right: 5px;"></i>SALVAR</button>
+                            style="margin-right: 5px;"></i>Editar</button>
                     <button type="reset" class="btn-reset"><i class="fas fa-trash-restore"
                             style="margin-right: 5px;"></i>LIMPAR</button>
                 </div>
@@ -119,9 +120,7 @@
                                             @method('PATCH')
                                             <button class="btn-check" ><i class="far fa-check-circle"></i></button>
                                         </form>
-                                        <form action="{{ route('dashboard_editar', $agendamento->id)}}" method="post">
-                                            @csrf
-                                            @method('GET')
+                                        <form action="">
                                             <button class="btn-edit"><i class="far fa-edit"></i></button>
                                         </form>
                                         <form action="{{ route('destroy_agenda', $agendamento->id)}}" method="post">

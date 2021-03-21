@@ -27,9 +27,9 @@ a {
 .bg {
   display: flex;
   background-color: #03917538;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
   z-index: -1;
 }
 .imagem-bg {
@@ -38,10 +38,10 @@ a {
   align-items: center;
   text-align: center;
   background-image: url(../img/bg-1.svg);
-  position: relative;
+  position: fixed;
   overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -396,6 +396,7 @@ a {
   align-items: center;
   margin-top: 25px;
   font-weight: 600;
+  background-color: transparent;
 }
 .popup {
   position: fixed;
@@ -676,16 +677,19 @@ a {
     max-height: 530px;
   }
   .content-table {
+    background-color: red;
     width: 100%;
     max-width: 350px;
     min-height: 530px;
     max-height: 530px;
     overflow-x: scroll;
   }
+
   .btn-table {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
+
   .btn-check {
     margin: 5px;
     width: 35px;

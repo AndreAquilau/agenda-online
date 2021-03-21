@@ -18,8 +18,8 @@
 </head>
 
 <body>
- <!--Valores do Backgrounds-->
- <section class="bg">
+    <!--Valores do Backgrounds-->
+    <section class="bg">
         <div class="imagem-bg"></div>
     </section>
     <section class="head-screen">
@@ -37,16 +37,16 @@
     <section class="head">
         <div class="config">
             <div class="msg">Bem-Vindo</div>
-            <div class="usuario">Guilherme Araujo</div>
+            <div class="usuario">{{$usuario->name}}</div>
             <button class="btn-logout"><i class="fas fa-sign-out-alt"></i>Sair</button>
         </div>
     </section>
     <section class="container">
         <nav class="navbar">
-            <a href="dashboard.html">
+            <a href="{{ route('dashboard') }}">
                 <div class="agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agenda</div>
             </a>
-            <a href="historico.html">
+            <a href="{{ route('historico') }}">
                 <div class="historico"><i class="fas fa-history" style="margin-right: 5px;"></i>Historico</div>
             </a>
         </nav>
@@ -71,105 +71,17 @@
                             <!--Dados da tabela-->
                             <tbody>
                                 <!--Dados da tabela-->
+                                @foreach($agendamentos as $agendamento)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
+                                    <td>{{$agendamento->id}}</td>
+                                    <td>{{$agendamento->evento}}</td>
+                                    <td>{{$agendamento->data}}</td>
+                                    <td>{{$agendamento->hora}}</td>
+                                    <td>{{$agendamento->descricao}}</td>
+                                    <td>{{$agendamento->categoria}}</td>
                                     <td>Concluido</td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Aniversario</td>
-                                    <td>11/03/2021</td>
-                                    <td>15:00</td>
-                                    <td>Comprar presente</td>
-                                    <td>Festa</td>
-                                    <td>Concluido</td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                 </div>
