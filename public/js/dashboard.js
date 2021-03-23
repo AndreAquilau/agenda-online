@@ -12,3 +12,5 @@ function fechar() {
   document.getElementById('popup').style.display = 'none';
   document.getElementById('pop').style.display = 'none';
 }
+/******/ })()
+;

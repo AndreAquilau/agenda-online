@@ -188,8 +188,7 @@ a {
   box-shadow: 1px 1px 5px white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 /* ------------------------------------------------------------------------*/
 /* ---------->>> TITULO, FORMULARIO, BOTÕES(SALVAR E LIMPAR) <<<-----------*/
@@ -252,6 +251,7 @@ a {
   flex-direction: row;
   justify-content: center;
 }
+
 .btn-save {
   color: white;
   background-color: forestgreen;
@@ -302,36 +302,61 @@ a {
 /* --------------------------------------------------------------------*/
 /* ------------------------>>> TABELA DE DADOS <<<---------------------*/
 /* --------------------------------------------------------------------*/
-.content-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+.content-table tbody tr {
+  width: 100%;
 }
 .tabela {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 920px;
-  min-height: 530px;
-  max-height: 530px;
-  padding: 3px;
+  justify-content: flex-start;
+  width: 100%;
   overflow: scroll;
-  overflow: auto;
   background-color: transparent;
 }
+.content-table {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  border-radius: 5px 5px 0 0;
+  overflow: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+}
+.content-table thead {
+  width: 100%;
+}
 .content-table thead tr {
+  display: flex;
   background-color: #009879;
   color: #ffffff;
   text-align: center;
   font-weight: bold;
 }
-.content-table th,
-.content-table td {
-  padding: 12px 15px;
+.content-table th {
+  padding: 10px;
+}
+.content-table th, tr{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
   text-align: center;
+}
+
+.content-table td{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content-table tbody {
+  width: 100%;
 }
 .content-table tbody tr {
   border-bottom: 1px solid #dddddd;
@@ -341,6 +366,32 @@ a {
 }
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
+}
+
+.btn-table {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btn-check {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+}
+.btn-edit {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+}
+.btn-del {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
 }
 .btn-check {
   outline: none;
@@ -677,7 +728,6 @@ a {
     max-height: 530px;
   }
   .content-table {
-    background-color: red;
     width: 100%;
     max-width: 350px;
     min-height: 530px;
@@ -687,7 +737,8 @@ a {
 
   .btn-table {
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
   }
 
   .btn-check {
