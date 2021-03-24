@@ -29,13 +29,14 @@ class AgendaController extends Controller
 
     public function store(Request $request) {
         //dd($request->all());
+        $usuario = User::find(1);
         Agenda::create([
             'evento' => $request->evento,
             'data' => $request->data,
             'hora' => $request->hora,
             'categoria' => $request->categoria,
             'descricao' => $request->descricao,
-            'confirmado' => false,
+            'confirmado' => false
         ]);
 
         return redirect()->route('dashboard');

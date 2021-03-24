@@ -3,14 +3,19 @@ var __webpack_exports__ = {};
 /*!***********************************!*\
   !*** ./resources/js/dashboard.js ***!
   \***********************************/
-function abrir() {
-  document.getElementById('popup').style.display = 'block';
-  document.getElementById('pop').style.display = 'block';
-}
-
-function fechar() {
-  document.getElementById('popup').style.display = 'none';
-  document.getElementById('pop').style.display = 'none';
-}
+document.querySelector('#open').addEventListener('click', function (e) {
+  var popup = document.querySelector('#popup');
+  var pop = document.querySelector('#pop');
+  console.log('vesible element');
+  popup.style.display = 'block';
+  pop.style.display = 'block';
+});
+document.querySelector('#close').addEventListener('click', function (e) {
+  var popup = document.querySelector('#popup');
+  var pop = document.querySelector('#pop');
+  console.log('desible element');
+  popup.style.display = 'none';
+  pop.style.display = 'none';
+});
 /******/ })()
 ;

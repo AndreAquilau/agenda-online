@@ -17,10 +17,9 @@
     <title>Agenda</title>
 </head>
 
-<body>
-
+<body id="dashboard">
     <!--Valores do Backgrounds-->
-
+    @auth
     <section class="bg">
         <div class="imagem-bg"></div>
     </section>
@@ -39,8 +38,14 @@
     <section class="head">
         <div class="config">
             <div class="msg">Bem-Vindo</div>
-            <div class="usuario">{{$usuario->name}}</div>
-            <button class="btn-logout"><i class="fas fa-sign-out-alt"></i>Sair</button>
+            <div class="usuario">{{ Auth::user()->name }}</div>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-jet-dropdown-link href="{{ route('logout') }}"
+                onclick="event.preventDefault(); this.closest('form').submit();">
+                {{ __('Log Out') }}
+                </x-jet-dropdown-link>
+            </form>
         </div>
     </section>
     <section class="container">
@@ -56,7 +61,8 @@
             <div class="agendar">
                 <h1 class="titulo-agenda"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Agendar</h1>
                 <form action="{{ route('registrar_agenda') }}" method="POST" class="formulario">
-                @csrf
+                  @method('POST')
+                  @csrf
                     <div class="evento">
                         <input type="text" name="evento" class="evento-agendar" placeholder="Evento...">
                     </div>
@@ -80,7 +86,7 @@
                 <section class="avisos">
                     <div class="popup-save">Evento foi adicionado!</div>
                     <div class="popup-check">Evento foi concluido!</div>
-                    <div class="popup-edit">As alterações foram salvas!</div>
+                   <!-- <div class="popup-edit">As alterações foram salvas!</div> -->
                     <div class="popup-del">Evento foi excluido!</div>
                 </section>
             </div>
@@ -142,13 +148,13 @@
             </div>
         </section>
         <!--creditos-->
-            <p class="credito" onclick="abrir()">Creditos - Click Aqui</p>
+           <p class="credito" id="open">Creditos - Click Aqui</p>
     </section>
     <!--Estrutura do pop-->
     <div class="pop">
         <div id="popup" class="popup">
-            <button class="closed" onclick="fechar()"><i class="fas fa-times"></i></button>
-            <img src="img/logo.png" style="width: 150px; height: 150px;">
+            <button class="closed" id="close" ><a href="{{ route('dashboard') }}"><i class="fas fa-times"></i></a></button>
+            <img src="{{asset('img/logo.png')}}" style="width: 150px; height: 150px;">
             <h1>Obrigado!</h1>
             <p>A nossa equipe agradece a sua visita.</p>
             <p style="margin-top: 10px;">Alunos: André, Guilherme, Isabelly, Janismar e Miguel.</p>
@@ -156,7 +162,9 @@
         </div>
     </div>
     <div class="opaco" id="pop"></div>
-    <script src="{{asset('js/dashboard.js')}}"></script>
+    <script src="{{asset('js/dashboard.js')}}">
+    </script>
+    @endauth
 </body>
 
 </html>

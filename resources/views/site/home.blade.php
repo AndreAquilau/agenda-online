@@ -19,14 +19,20 @@
     <section class="container">
         <img src="{{asset('img/logo.png')}}" class="logo">
         <h1>Acesso Administrativo</h1>
+        <!--
         <div class="acesso">
         <input type="text" class="info" placeholder="Digite o seu Usuario!">
         <input type="password" class="info" placeholder="Digite a sua senha!">
         </div>
-        <button type="submit" class="btn">Entrar</button>
+        -->
+        <button type="submit" class="btn"><a href="/login">Entrar</a></button>
+        <button type="submit" class="btn"><a href="/register">Cadastra-se</a></button>
+        <!--
         <div class="help">
         <a href="#"><p class="link">Esqueci minha senha!</p></a>
         <a href="/login"><p class="link">Voltar para o inicio!</p></a></div>
+        <a href="/login"><p class="link">Voltar para o inicio!</p></a></div>
+        -->
     </section>
 
 </body>
