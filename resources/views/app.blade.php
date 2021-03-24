@@ -1,3 +1,4 @@
+@if (!Auth::user())
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -23,7 +24,11 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased" id="app-root">
-      @inertia
-
-   </body>
+@endif
+      @if (!Auth::user())
+          @inertia
+      @endif
+@if (!Auth::user())
+    </body>
 </html>
+@endif

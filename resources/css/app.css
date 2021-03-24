@@ -19,3 +19,14 @@ body {
 .min-h-screen {
   background: none;
 }
+
+#link-root {
+  position: absolute;
+  z-index: 1;
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+#app > div > #link-root {
+  position: absolute; z-index: 0 !important; width: 100vw !important; height: 100vh !important;
+}

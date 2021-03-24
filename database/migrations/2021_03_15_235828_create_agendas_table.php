@@ -21,8 +21,8 @@ class CreateAgendasTable extends Migration
             $table->boolean('confirmado');
             $table->date('data');
             $table->time('hora');
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->date('created_at')->default(DB::raw('now()'));
+            $table->date('updated_at')->default(DB::raw('now()'));
         });
     }
 
