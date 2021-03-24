@@ -38,7 +38,7 @@
         <div class="config">
             <div class="msg">Bem-Vindo</div>
             <div class="usuario">{{ Auth::user()->name }}</div>
-            <form method="POST" action="{{ route('logout') }}">
+            <form method="POST" class="msg" action="{{ route('logout') }}">
                 @csrf
                 <x-jet-dropdown-link href="{{ route('logout') }}"
                 onclick="event.preventDefault(); this.closest('form').submit();">
