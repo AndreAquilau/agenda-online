@@ -163,6 +163,7 @@
     </div>
     <div class="opaco" id="pop"></div>
     <script src="{{asset('js/dashboard.js')}}">
+      window.location.reload();
     </script>
     @endauth
 </body>

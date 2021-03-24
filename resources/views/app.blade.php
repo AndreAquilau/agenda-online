@@ -21,7 +21,7 @@
         <script src="https://kit.fontawesome.com/3d5793b601.js" crossorigin="anonymous"></script>
         <!-- Scripts -->
         @routes
-        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/app.js') }}" defer>window.location.reload();</script>
     </head>
     <body class="font-sans antialiased" id="app-root">
 @endif
